@@ -2,9 +2,8 @@
   "name": "portfolio-site",
   "version": "0.0.0",
   "description": "A website designed to showcase projects I've worked on.",
-  "main": "site.js",
   "scripts": {
-    "start": "node site.js",
+    "start": "node app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
