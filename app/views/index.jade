@@ -2,9 +2,8 @@ html(ng-app="Resume")
     head
         meta(charset="utf-8")
         title Daniel Erickson
-        script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
-        script(type="text/javascript" src="/js/angular.min.js")
-        script(type="text/javascript" src="/js/site.js")
+        link(type="text/css" href="/css/reset.css")
+        link(type="text/css" href="/css/main.css")
     body(ng-controller="ResumeController")
         h1(ng-if="name") {{name}}
 
@@ -21,10 +20,11 @@ html(ng-app="Resume")
         #experience(ng-if="experience")
             h2 Experience
             .job(ng-repeat="job in experience")
-                h3.school {{job.position}}
-                .company {{job.company}}
+                h3.position {{job.position}}
+                a(href="{{job.link}}").company {{job.company}}
                 .location {{job.location}}
-                .date {{job.date}}
+                .date {{job.date.start}} - {{job.date.end}} 
+                    span(ng-if="job.date.qualification") ({{job.date.qualification}})
                 .duties
                     .duty(ng-repeat="duty in job.duties") {{duty}}
 
@@ -43,3 +43,6 @@ html(ng-app="Resume")
                 .date {{certification.date}}
                 .subject {{certification.subject}}
 
+        script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
+        script(type="text/javascript" src="/js/angular.min.js")
+        script(type="text/javascript" src="/js/site.js")

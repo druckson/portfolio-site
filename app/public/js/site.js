@@ -64,8 +64,13 @@
         {
             "position": "Contract Software Developer",
             "company": "Lost Creek Consulting Inc.",
+            "link": "http://lostcreekconsulting.com/",
             "location": "Springfield, OR",
-            "date": "2005-2014 (intermittent)",
+            "date": {
+                "start": "2005",
+                "end": "2014",
+                "qualification": "intermittent"
+            },
             "duties": [
                 "Designed and developed client-facing applications used to manage electronic medical records systems.",
                 "Worked with analysts and other developers to optimize and redesign internal processes and tools.",
@@ -75,8 +80,12 @@
         {
             "position": "Software Developer",
             "company": "Concentric Sky Inc.",
+            "link": "http://concentricsky.com/",
             "location": "Eugene, OR",
-            "date": "April 2009 - August 2011",
+            "date": {
+                "start": "April 2009",
+                "end": "August 2011"
+            },
             "duties": [
                 "Designed database schemas and wrote back-end and front-end code for interactive websites.",
                 "Deployed websites to a range of host servers, both internal and externally colocated.",
@@ -87,8 +96,12 @@
         {
             "position": "Intern Software Developer",
             "company": "Prime Factors Inc.",
+            "link": "http://primefactors.com/",
             "location": "Eugene, OR",
-            "date": "June 2008 - October 2009",
+            "date": {
+                "start": "June 2008",
+                "end": "October 2009"
+            },
             "duties": [
                 "Wrote code samples and foreign function interfaces in C#, Visual Basic and Java for several information security products.",
                 "Wrote and ran tests required for NIST validation of the AES encryption code used in the EncryptRIGHT product.",
