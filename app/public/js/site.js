@@ -74,7 +74,8 @@
         },
         {
             "position": "Software Developer",
-            "company": "Concentric Sky Inc. - Eugene, OR",
+            "company": "Concentric Sky Inc.",
+            "location": "Eugene, OR",
             "date": "April 2009 - August 2011",
             "duties": [
                 "Designed database schemas and wrote back-end and front-end code for interactive websites.",
@@ -85,13 +86,29 @@
         },
         {
             "position": "Intern Software Developer",
-            "company": "Prime Factors Inc. - Eugene, OR",
+            "company": "Prime Factors Inc.",
+            "location": "Eugene, OR",
             "date": "June 2008 - October 2009",
             "duties": [
                 "Wrote code samples and foreign function interfaces in C#, Visual Basic and Java for several information security products.",
                 "Wrote and ran tests required for NIST validation of the AES encryption code used in the EncryptRIGHT product.",
                 "Assisted in the development and documentation of EncryptRIGHT."
             ]
+        }
+    ],
+    "education": [
+        {
+            "school": "University of Oregon",
+            "location": "Eugene, OR",
+            "date": "March 2014",
+            "degree": "Bachelor of Science in Computer and Information Science"
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Microsoft Certified Professional",
+            "date": "2008",
+            "subject": "Windows Client Application Development"
         }
     ]
 });
