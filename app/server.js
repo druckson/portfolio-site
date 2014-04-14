@@ -1,8 +1,10 @@
 var express = require("express");
+var stylish = require("stylish");
 var app = express();
 
 app.set('views', __dirname + "/views/");
 app.set('view engine', "jade");
+app.use(stylish(__dirname + "/public/"));
 app.use(express.static(__dirname + "/public/"));
 
 app.get('/', function(req, res) {
