@@ -11,6 +11,10 @@ app.get('/', function(req, res) {
     res.render('index', {});
 });
 
+app.get('/main.html', function(req, res) {
+    res.render('partials/main', {});
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
     console.log("Listening on " + port);

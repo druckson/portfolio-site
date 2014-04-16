@@ -1,48 +1,13 @@
-html(ng-app="Resume")
+html(x-ng-app="Portfolio")
     head
         meta(charset="utf-8")
         title Daniel Erickson
         link(rel="stylesheet" type="text/css" href="/css/reset.css")
         link(rel="stylesheet" type="text/css" href="/css/main.css")
-    body(ng-controller="ResumeController")
-        h1(ng-if="name") {{name}}
+    body(x-ng-controller="PortfolioController")
 
-        #contact(ng-if="contact")
-            h2 Contact
+        div(x-ng-view)
 
-        #skills(ng-if="skills")
-            h2 Skills
-            .skill(ng-repeat="(categoryName, category) in skills")
-                h3 {{categoryName}}
-                ul
-                    li(ng-repeat="skill in category") {{skill}}
-
-        #experience(ng-if="experience")
-            h2 Experience
-            .job(ng-repeat="job in experience")
-                h3.position {{job.position}}
-                a(href="{{job.link}}").company {{job.company}}
-                .location {{job.location}}
-                .date {{job.date.start}} - {{job.date.end}} 
-                    span(ng-if="job.date.qualification") ({{job.date.qualification}})
-                .duties
-                    .duty(ng-repeat="duty in job.duties") {{duty}}
-
-        #education(ng-if="education")
-            h2 Education
-            .education-entry(ng-repeat="degree in education")
-                h3.school {{degree.school}}
-                .location {{degree.location}}
-                .date {{degree.date}}
-                .degree {{degree.degree}}
-
-        #certifications(ng-if="certifications")
-            h2 Certifications
-            .certification(ng-repeat="certification in certifications")
-                h3.title {{certification.title}}
-                .date {{certification.date}}
-                .subject {{certification.subject}}
-
-        script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
-        script(type="text/javascript" src="/js/angular.min.js")
+        script(src="http://code.angularjs.org/1.2.16/angular.min.js")
+        script(src="http://code.angularjs.org/1.2.16/angular-route.min.js")
         script(type="text/javascript" src="/js/site.js")
