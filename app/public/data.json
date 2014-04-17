@@ -157,6 +157,14 @@
             "tags": [
                 "processing"
             ]
+        },
+        {
+            "name": "Multi-resolution terrain generator with erosion simulation",
+            "description": "Written in C++ and Cuda.  Uses a multi-resolution noise generator for initial detail generation, then an erosion simulation for feature formation.  Detail can be increased or decreased by adjusting the resolution of the simulation mesh.",
+            "tags": [
+                "cpp",
+                "cuda"
+            ]
         }
     ],
     "education": [
