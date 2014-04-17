@@ -152,7 +152,8 @@
         },
         {
             "name": "Real-time incompressible fluid simulation",
-            "description": "Both 2D and 3D versions written in the Processing language.  2D version written as an OpenCL kernel with OpenGL interoperability for visualization.  Based on Jos Stam?s 1999 paper 'Stable Fluids'.",
+            "description": "Both 2D and 3D versions written in the Processing language.  2D version written as an OpenCL kernel with OpenGL interoperability for visualization.  Based on Jos Stam's 1999 paper \"Stable Fluids\".",
+            "link": "http://www.openprocessing.org/sketch/51851",
             "tags": [
                 "processing"
             ]
