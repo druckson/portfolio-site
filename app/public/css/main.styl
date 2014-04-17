@@ -1,47 +1,55 @@
-div
-    padding: 1em
+body
+    //font-family: 'Quicksand', sans-serif
+    li
+        margin-top: 0.3em
 
-#top
-    margin: 0
-    padding: 0
+h1
+    font-size: 4.2em
+    font-weight: 700
+
+h2
+    font-weight: 700
+    margin-top: 1.2em
+    font-size: 2.61em
+
+h3
+    margin-top: 0.6em
+    font-size: 1.61em
+
+.top>h2
+    margin-top: 0em
+
+#sidebar
     position: absolute
+    left: 0
     top: 0
-    left: 0
-    right: 0
-    height: 3em
+    width: 20em
+    #name
+        color: #2B81D6
+        padding: 2em
 
-#bottom
-    margin: 0
-    padding: 0
+#content-container
     position: absolute
-    top: 3em
-    bottom: 0
-    left: 0
-    right: 0
-
-#name
-    position: relative
+    left: 20em
     height: 100%
-    margin: 0
-    padding: 0
-    text-align: center
-    background-color: #555
+    overflow: auto
 
-#contact
-    background-color: #800
 
-#skills
-    background-color: #080
+    #content
+        margin: 2em    
 
-#experience
-    background-color: #008
-    display: none
-
-#education
-    background-color: #440
-    display: none
-
-#certifications
-    background-color: #044
-    display: none
+        h2
+            width: 100%
+            border-bottom: thick solid #000
+            display: block
     
+        #contact
+            //background-color: #800
+        #skills
+            //background-color: #080
+        #experience
+            //background-color: #008
+        #education
+            //background-color: #440
+        #certifications
+            //background-color: #044
