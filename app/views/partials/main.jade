@@ -1,39 +1,44 @@
-#top
-    #name(x-ng-if="name") {{name}}
+#sidebar
+    #name(x-ng-if="name")
+        h1 {{name}}
 
-#bottom
-    #contact(x-ng-if="contact")
-        h2 Contact
-
-    #skills(x-ng-if="skills")
-        h2 Skills
-        .skill(x-ng-repeat="(categoryName, category) in skills")
-            h3 {{categoryName}}
-            ul
-                li(x-ng-repeat="skill in category") {{skill}}
-
-    #experience(x-ng-if="experience")
-        h2 Experience
-        .job(x-ng-repeat="job in experience")
-            h3.position {{job.position}}
-            a(href="{{job.link}}").company {{job.company}}
-            .location {{job.location}}
-            .date {{job.date.start}} - {{job.date.end}} 
-                span(x-ng-if="job.date.qualification") ({{job.date.qualification}})
-            .duties
-                .duty(x-ng-repeat="duty in job.duties") {{duty}}
-
-    #education(x-ng-if="education")
-        h2 Education
-        .education-entry(x-ng-repeat="degree in education")
-            h3.school {{degree.school}}
-            .location {{degree.location}}
-            .date {{degree.date}}
-            .degree {{degree.degree}}
-
-    #certifications(x-ng-if="certifications")
-        h2 Certifications
-        .certification(x-ng-repeat="certification in certifications")
-            h3.title {{certification.title}}
-            .date {{certification.date}}
-            .subject {{certification.subject}}
+#content-container
+    #content
+        #skills.top(x-ng-if="skills")
+            h2 Skills
+            .skill(x-ng-repeat="(categoryName, category) in skills")
+                h3 {{categoryName}}
+                ul
+                    li(x-ng-repeat="skill in category") {{skill}}
+        
+        #experience(x-ng-if="experience")
+            h2 Experience
+            .job(x-ng-repeat="job in experience")
+                h3.position {{job.position}}
+                a(href="{{job.link}}").company {{job.company}}
+                .location {{job.location}}
+                .date {{job.date.start}} - {{job.date.end}} 
+                    span(x-ng-if="job.date.qualification") ({{job.date.qualification}})
+                .duties
+                    .duty(x-ng-repeat="duty in job.duties") {{duty}}
+    
+        #projects(x-ng-if="projects")
+            h2 Projects
+            .project(x-ng-repeat="project in projects")
+                h3.name {{project.name}}
+                .description {{project.description}}
+        
+        #education(x-ng-if="education")
+            h2 Education
+            .education-entry(x-ng-repeat="degree in education")
+                h3.school {{degree.school}}
+                .location {{degree.location}}
+                .date {{degree.date}}
+                .degree {{degree.degree}}
+        
+        #certifications(x-ng-if="certifications")
+            h2 Certifications
+            .certification(x-ng-repeat="certification in certifications")
+                h3.title {{certification.title}}
+                .date {{certification.date}}
+                .subject {{certification.subject}}
