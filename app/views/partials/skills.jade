@@ -1,0 +1,8 @@
+#content-container
+    #content
+        #skills.top(x-ng-if="skills")
+            h2 Skills
+            .skill(x-ng-repeat="(categoryName, category) in skills")
+                h3 {{categoryName}}
+                ul
+                    li(x-ng-repeat="skill in category") {{skill}}

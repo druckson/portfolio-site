@@ -1,0 +1,12 @@
+#content-container
+    #content
+        #experience(x-ng-if="experience")
+            h2 Experience
+            .job(x-ng-repeat="job in experience")
+                h3.position {{job.position}}
+                a(href="{{job.link}}").company {{job.company}}
+                .location {{job.location}}
+                .date {{job.date.start}} - {{job.date.end}} 
+                    span(x-ng-if="job.date.qualification") ({{job.date.qualification}})
+                .duties
+                    .duty(x-ng-repeat="duty in job.duties") {{duty}}
