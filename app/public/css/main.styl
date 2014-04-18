@@ -1,23 +1,24 @@
+golden = 1.618
+
 body
-    //font-family: 'Quicksand', sans-serif
-    li
-        margin-top: 0.3em
+    font-family: 'Quicksand', sans-serif
 
 h1
-    font-size: 4.2em
-    font-weight: 700
+    font-family: 'Josefin Slab', serif
+    //font-family: serif
+    font-size: golden**3 em
 
 h2
-    font-weight: 700
-    margin-top: 1.2em
-    font-size: 2.61em
+    margin-top: 0.5*golden**2 em
+    font-size: golden**2 em
 
 h3
-    margin-top: 0.6em
-    font-size: 1.61em
+    margin-top: 0.5*golden em
+    font-size: golden em
 
 .top>h2
     margin-top: 0em
+
 
 #sidebar
     position: absolute
@@ -25,22 +26,32 @@ h3
     top: 0
     width: 20em
     #name
+        text-align: right
         color: #2B81D6
-        padding: 2em
+        margin: 2em
+
+    a
+        text-decoration: none
+        color: #000
+        font-size: golden em
+        display: block
+        text-align: center
+    a:hover
+        color: #444
 
 #content-container
     position: absolute
     left: 20em
     height: 100%
+    right: 0
     overflow: auto
 
-
     #content
-        margin: 2em    
+        margin: 2em
 
         h2
             width: 100%
-            border-bottom: thick solid #000
+            border-bottom: thin solid #000
             display: block
     
         #contact

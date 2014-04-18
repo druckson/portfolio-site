@@ -4,9 +4,16 @@
     app.config(function($routeProvider) {
         //console.log($routeProvider);
         $routeProvider.when('/', {
-            templateUrl: "main.html",
+            templateUrl: "/partials/main.html",
             controller: "PortfolioController"
         });
+
+        $routeProvider.when('/skills/', {
+            templateUrl: "/partials/skills.html",
+            controller: "PortfolioController"
+        });
+
+
     });
 
     app.controller("PortfolioController", function($scope, $http) {
