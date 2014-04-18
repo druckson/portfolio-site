@@ -1,0 +1,9 @@
+#content-container
+    #content
+        #education(x-ng-if="education")
+            h2 Education
+            .education-entry(x-ng-repeat="degree in education")
+                h3.school {{degree.school}}
+                .location {{degree.location}}
+                .date {{degree.date}}
+                .degree {{degree.degree}}

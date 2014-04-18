@@ -1,0 +1,7 @@
+#content-container
+    #content
+        #projects(x-ng-if="projects")
+            h2 Projects
+            .project(x-ng-repeat="project in projects")
+                h3.name {{project.name}}
+                .description {{project.description}}

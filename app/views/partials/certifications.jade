@@ -1,0 +1,8 @@
+#content-container
+    #content
+        #certifications(x-ng-if="certifications")
+            h2 Certifications
+            .certification(x-ng-repeat="certification in certifications")
+                h3.title {{certification.title}}
+                .date {{certification.date}}
+                .subject {{certification.subject}}
