@@ -23,6 +23,9 @@
             .project(x-ng-repeat="project in projects")
                 h3.name {{project.name}}
                 .description {{project.description}}
+                .images
+                    .image(x-ng-repeat="image in project.images")
+                        img(src="{{image}}")
         
         #education(x-ng-if="education")
             h2 Education

@@ -142,7 +142,7 @@
             "name": "Real-time ray-casting visualizer for CT scan data",
             "description": "Adapted from an assignment for a Scientific Visualization course.  Ray-casting performed in a GLSL shader program to achieve interactive framerates.",
             "images": [
-
+                "/images/raycaster.gif"
             ],
             "tags": [
                 "go",
