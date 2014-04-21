@@ -1,12 +1,5 @@
 #content-container
     #content
-        #skills.top(x-ng-if="skills")
-            h2 Skills
-            .skill(x-ng-repeat="(categoryName, category) in skills")
-                h3 {{categoryName}}
-                ul
-                    li(x-ng-repeat="skill in category") {{skill}}
-        
         #experience(x-ng-if="experience")
             h2 Experience
             .job(x-ng-repeat="job in experience")
@@ -17,15 +10,6 @@
                     span(x-ng-if="job.date.qualification") ({{job.date.qualification}})
                 .duties
                     .duty(x-ng-repeat="duty in job.duties") {{duty}}
-    
-        #projects(x-ng-if="projects")
-            h2 Projects
-            .project(x-ng-repeat="project in projects")
-                h3.name {{project.name}}
-                .description {{project.description}}
-                .images
-                    .image(x-ng-repeat="image in project.images")
-                        img(src="{{image}}")
         
         #education(x-ng-if="education")
             h2 Education
@@ -34,6 +18,28 @@
                 .location {{degree.location}}
                 .date {{degree.date}}
                 .degree {{degree.degree}}
+    
+        #projects(x-ng-if="projects")
+            h2 Projects
+            .project(x-ng-repeat="project in projects")
+                h3.name {{project.name}}
+                .description {{project.description}}
+                .links(x-ng-if="project.links")
+                    .link(x-ng-repeat="link in project.links")
+                        a(href="{{link.url}}") {{link.name}}
+                .images(x-ng-if="project.images")
+                    .image(x-ng-repeat="image in project.images")
+                        img(ng-src="{{image}}")
+                .sketches(x-ng-if="project.sketches")
+                    .sketch(x-ng-repeat="sketch in project.sketches")
+                        iframe(width="{{sketch.width}}" height="{{sketch.height}}" scrolling="no" frameborder="0" src="{{sketch.url}}")
+
+        #skills.top(x-ng-if="skills")
+            h2 Skills
+            .skill(x-ng-repeat="(categoryName, category) in skills")
+                h3 {{categoryName}}
+                ul
+                    li(x-ng-repeat="skill in category") {{skill}}
         
         #certifications(x-ng-if="certifications")
             h2 Certifications

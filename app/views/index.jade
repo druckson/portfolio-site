@@ -13,9 +13,14 @@ html(x-ng-app="Portfolio")
                 h1 {{name}}
             a(href="/#/skills/") Skills
             a(href="/#/experience/") Experience
+            a(href="/#/education/") Education
+            a(href="/#/projects/") Projects
+            a(href="/#/certifications/") Certifications
 
         div(x-ng-view)
 
+        script(src="/js/underscore-min.js")
         script(src="http://code.angularjs.org/1.2.16/angular.min.js")
         script(src="http://code.angularjs.org/1.2.16/angular-route.min.js")
+        script(src="http://code.angularjs.org/1.2.16/angular-sanitize.min.js")
         script(type="text/javascript" src="/js/site.js")

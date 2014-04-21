@@ -58,6 +58,54 @@
             "aix": "AIX"
         }
     },
+    "proficiency": {
+        "csharp": 4.5,
+        "python": 4.0,
+        "javascript": 4.5,
+        "lua": 3.5,
+        "c": 2.5,
+        "cpp": 2,
+        "go": 2.5,
+        "rust": 1.5,
+        "java": 2.0,
+        "processing": 3.0,
+        "d": 1.5,
+        "scheme": 1.5,
+        "ml": 1.0,
+        "squirrel": 2.5,
+        "vb": 2.5,
+        "django": 3.5,
+        "dot-net": 3.0,
+        "node": 3.5,
+        "opengl": 3.0,
+        "glsl": 3.0,
+        "opencl": 2.5,
+        "rhino": 3.5,
+        "knockout": 3.0,
+        "angular": 3.0,
+        "unity": 2.5,
+        "jni": 2.0,
+        "jquery": 3.5,
+        "vim": 4.0,
+        "git": 3.5,
+        "svn": 3.5,
+        "visual-studio": 4.0,
+        "eclipse": 2.5,
+        "unity": 2.5,
+        "nunit": 3.0,
+        "jenkins": 3.0,
+        "grunt": 2.5,
+        "chai": 3.0,
+        "mocha": 3.0,
+        "browserify": 3.5,
+        "arch": 3.5,
+        "macos": 4.0,
+        "ubuntu": 4.0,
+        "windows": 4.0,
+        "hpux": 2.5,
+        "sunos": 2.5,
+        "aix": 2.5
+    },
     "experience": [
         {
             "position": "Contract Software Developer",
@@ -142,7 +190,8 @@
             "name": "Real-time ray-casting visualizer for CT scan data",
             "description": "Adapted from an assignment for a Scientific Visualization course.  Ray-casting performed in a GLSL shader program to achieve interactive framerates.",
             "images": [
-                "/images/raycaster.gif"
+                "/images/raycaster.gif",
+                "/images/raycaster2.gif"
             ],
             "tags": [
                 "go",
@@ -153,7 +202,24 @@
         {
             "name": "Real-time incompressible fluid simulation",
             "description": "Both 2D and 3D versions written in the Processing language.  2D version written as an OpenCL kernel with OpenGL interoperability for visualization.  Based on Jos Stam's 1999 paper \"Stable Fluids\".",
-            "link": "http://www.openprocessing.org/sketch/51851",
+            "links": [
+                {
+                    "name": "OpenProcessing",
+                    "url": "http://www.openprocessing.org/sketch/145038"
+                }
+            ],
+            "sketches": [
+                {
+                    "width": 328,
+                    "height": 380,
+                    "url": "http://www.openprocessing.org/sketch/145144/embed/?width=300&height=300&border=true"
+                },
+                {
+                    "width": 328,
+                    "height": 380,
+                    "url": "http://www.openprocessing.org/sketch/145038/embed/?width=300&height=300&border=true"
+                }
+            ],
             "tags": [
                 "processing"
             ]
@@ -164,6 +230,19 @@
             "tags": [
                 "cpp",
                 "cuda"
+            ]
+        },
+        {
+            "name": "C# image scraping utility (coding sample)",
+            "description": "Written in C# using MonoDevelop. Scrapes the html content at the specified URL, downloads each image into the specified directory.",
+            "links": [
+                {
+                    "name": "Github",
+                    "url": "http://github.com/druckson/image-scraper"
+                }
+            ],
+            "tags": [
+                "csharp"
             ]
         }
     ],

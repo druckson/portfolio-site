@@ -5,3 +5,12 @@
             .project(x-ng-repeat="project in projects")
                 h3.name {{project.name}}
                 .description {{project.description}}
+                .links(x-ng-if="project.links")
+                    .link(x-ng-repeat="link in project.links")
+                        a(href="{{link.url}}") {{link.name}}
+                .images(x-ng-if="project.images")
+                    .image(x-ng-repeat="image in project.images")
+                        img(ng-src="{{image}}")
+                .sketches(x-ng-if="project.sketches")
+                    .sketch(x-ng-repeat="sketch in project.sketches")
+                        iframe(width="{{sketch.width}}" height="{{sketch.height}}" scrolling="no" frameborder="0" src="{{sketch.url}}")

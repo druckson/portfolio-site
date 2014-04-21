@@ -8,12 +8,19 @@
             controller: "PortfolioController"
         });
 
-        $routeProvider.when('/skills/', {
-            templateUrl: "/partials/skills.html",
-            controller: "PortfolioController"
+        _.each(["skills", "experience", "education", "projects", "certifications"], function(page) {
+            $routeProvider.when('/' + page + '/', {
+                templateUrl: "/partials/" + page + ".html",
+                controller: "PortfolioController"
+            });
         });
+    });
 
-
+    app.config(function($sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            "self",
+            "http://www.openprocessing.org/sketch/*/embed/**"
+        ]);
     });
 
     app.controller("PortfolioController", function($scope, $http) {
