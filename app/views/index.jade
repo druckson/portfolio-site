@@ -9,7 +9,7 @@ html(x-ng-app="Portfolio")
 
     body(x-ng-controller="PortfolioController")
         #container
-            #sidebar
+            #sidebar(x-ng-cloak class="ng-cloak")
                 a#name(href="/#/")
                     h1 {{name}}
                 a(href="/#/experience/") Experience
@@ -18,7 +18,7 @@ html(x-ng-app="Portfolio")
                 a(href="/#/skills/") Skills
                 a(href="/#/certifications/") Certifications
 
-            div(x-ng-view)
+            div(x-ng-view x-ng-cloak class="ng-cloak")
 
         script(id="data" type="application/json")!=data
         script(src="/js/underscore-min.js")
