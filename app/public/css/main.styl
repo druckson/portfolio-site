@@ -20,60 +20,67 @@ h3
     margin-top: 0em
 
 
-#sidebar
-    position: absolute
-    left: 0
-    top: 0
-    width: 20em
-    height: 100%
-    border-right: thin solid #000
-    #name
-        text-align: right
-        color: #2B81D6
-        margin: 2em
+#container
+    #sidebar
+        position: absolute
+        left: 0
+        top: 0
+        width: 20em
+        height: 100%
+        border-right: thin solid #000
 
-    a
-        text-decoration: none
-        color: #000
-        font-size: golden em
-        display: block
-        text-align: center
-    a:hover
-        color: #444
-
-#content-container
-    position: absolute
-    left: 20em
-    height: 100%
-    right: 0
-    overflow: auto
-
-    #content
-        margin: 2em
-
-        h2
-            width: 100%
-            border-bottom: thin solid #000
-            display: block
+        a#name
+            text-align: right
+            color: #2B81D6
+            margin: 2em
+            font-size: 1em
     
-        #contact
-            //background-color: #800
-        #skills
-            //background-color: #080
-        #experience
-            //background-color: #008
-        #education
-            //background-color: #440
-        #projects
-            //background-color: #440
-            .image
-                display: inline
-                img
-                    margin: 1em
-            .sketch
-                display: inline
-                canvas
-                    margin: 1em
-                    border: thin solid #000
-        #certifications
-            //background-color: #044
+        a
+            margin-top: 0.5 em
+            text-decoration: none
+            color: #000
+            font-size: golden em
+            display: block
+            text-align: center
+
+        a:hover
+            font-weight: bold
+            color: #444
+    
+    #content-container
+        position: absolute
+        left: 20em
+        height: 100%
+        right: 0
+        overflow: auto
+    
+        #content
+            max-width: 800px
+            margin: 2em
+    
+            h2
+                width: 100%
+                border-bottom: thin solid #000
+                display: block
+        
+            #contact
+                //background-color: #800
+            #skills
+                //background-color: #080
+            #experience
+                //background-color: #008
+            #education
+                //background-color: #440
+            #projects
+                //background-color: #440
+                .image
+                    display: inline
+                    img
+                        margin: 1em
+                .sketch
+                    display: inline
+                    canvas
+                        margin: 1em
+                        border: thin solid #000
+            #certifications
+                //background-color: #044

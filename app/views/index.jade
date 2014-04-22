@@ -8,16 +8,17 @@ html(x-ng-app="Portfolio")
         script(src="/js/processing.min.js")
 
     body(x-ng-controller="PortfolioController")
-        #sidebar
-            #name(x-ng-if="name")
-                h1 {{name}}
-            a(href="/#/experience/") Experience
-            a(href="/#/projects/") Projects
-            a(href="/#/education/") Education
-            a(href="/#/skills/") Skills
-            a(href="/#/certifications/") Certifications
+        #container
+            #sidebar
+                a#name(href="/#/")
+                    h1 {{name}}
+                a(href="/#/experience/") Experience
+                a(href="/#/projects/") Projects
+                a(href="/#/education/") Education
+                a(href="/#/skills/") Skills
+                a(href="/#/certifications/") Certifications
 
-        div(x-ng-view)
+            div(x-ng-view)
 
         script(id="data" type="application/json")!=data
         script(src="/js/underscore-min.js")
