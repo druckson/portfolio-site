@@ -23,6 +23,18 @@
         ]);
     });
 
+    app.directive('processing', function($http) {
+        return function(scope, iElement, iAttr) {
+            $http({method: "GET", url: iAttr.processing}).success(function(data) {
+                console.log("Hello", Processing.compile(data).sourceCode);
+                scope.$processing = new Processing(iElement[0], Processing.compile(data));
+            });
+            
+            //scope.$processing = new Processing(iElement[0], scope[iAttr.processing]);
+        };
+    });
+
+
     app.controller("PortfolioController", function($scope, $http) {
         var data = JSON.parse(Sizzle("#data")[0].innerHTML);
         for (k in data) {
