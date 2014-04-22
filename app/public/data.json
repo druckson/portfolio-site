@@ -211,12 +211,12 @@
             "sketches": [
                 {
                     "width": 328,
-                    "height": 380,
+                    "height": 350,
                     "url": "http://www.openprocessing.org/sketch/145144/embed/?width=300&height=300&border=true"
                 },
                 {
                     "width": 328,
-                    "height": 380,
+                    "height": 350,
                     "url": "http://www.openprocessing.org/sketch/145038/embed/?width=300&height=300&border=true"
                 }
             ],
@@ -234,7 +234,7 @@
         },
         {
             "name": "C# image scraping utility (coding sample)",
-            "description": "Written in C# using MonoDevelop. Scrapes the html content at the specified URL, downloads each image into the specified directory.",
+            "description": "Written in C# using MonoDevelop.  Scrapes the html content at the specified URL, downloads each image into the specified directory.  Written to demonstrate my professional coding standards.",
             "links": [
                 {
                     "name": "Github",

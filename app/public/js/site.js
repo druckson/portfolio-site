@@ -4,7 +4,7 @@
     app.config(function($routeProvider) {
         //console.log($routeProvider);
         $routeProvider.when('/', {
-            templateUrl: "/partials/main.html",
+            templateUrl: "/partials/experience.html",
             controller: "PortfolioController"
         });
 
@@ -24,12 +24,9 @@
     });
 
     app.controller("PortfolioController", function($scope, $http) {
-        $http({method: "GET", url: "/data.json"})
-            .success(function(data, status, headers, config) {
-                console.log(data);
-                for (k in data) {
-                    $scope[k] = data[k];
-                }
-            });
+        var data = JSON.parse(Sizzle("#data")[0].innerHTML);
+        for (k in data) {
+            $scope[k] = data[k];
+        }
     });
 })();

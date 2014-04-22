@@ -1,3 +1,4 @@
+var fs = require("fs");
 var express = require("express");
 var stylish = require("stylish");
 var connect_jade_html = require("connect-jade-html");
@@ -13,7 +14,11 @@ app.use(connect_jade_html({
 app.use(express.static(__dirname + "/public/"));
 
 app.get('/', function(req, res) {
-    res.render('index', {});
+    fs.readFile(__dirname + "/public/data.json", "utf8", function(err, data) {
+        res.render('index', {
+            data: data
+        });
+    });
 });
 
 var port = process.env.PORT || 5000;
