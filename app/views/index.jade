@@ -9,14 +9,20 @@ html(x-ng-app="Portfolio")
 
     body(x-ng-controller="PortfolioController")
         #container
-            #sidebar(x-ng-cloak class="ng-cloak")
+            #navigation(x-ng-cloak class="ng-cloak")
                 a#name(href="/#/")
                     h1 {{name}}
-                a(href="/#/experience/") Experience
-                a(href="/#/projects/") Projects
-                a(href="/#/education/") Education
-                a(href="/#/skills/") Skills
-                a(href="/#/certifications/") Certifications
+                ul
+                    li
+                        a(href="/#/experience/") Experience
+                    li
+                        a(href="/#/projects/") Projects
+                    li
+                        a(href="/#/education/") Education
+                    li
+                        a(href="/#/skills/") Skills
+                    li
+                        a(href="/#/certifications/") Certifications
 
             div(x-ng-view x-ng-cloak class="ng-cloak")
 

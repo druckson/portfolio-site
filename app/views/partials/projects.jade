@@ -15,3 +15,5 @@
                     .sketch(x-ng-repeat="sketch in project.sketches")
                         //iframe(width="{{sketch.width}}" height="{{sketch.height}}" scrolling="no" frameborder="0" src="{{sketch.url}}")
                         canvas(width="{{sketch.width}}" height="{{sketch.height}}" processing="{{sketch.pde}}")
+                    .note
+                        em Interactive section, mouse over to move fluid.

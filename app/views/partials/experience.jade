@@ -8,5 +8,5 @@
                 .location {{job.location}}
                 .date {{job.date.start}} - {{job.date.end}} 
                     span(x-ng-if="job.date.qualification") ({{job.date.qualification}})
-                .duties
-                    .duty(x-ng-repeat="duty in job.duties") {{duty}}
+                ul.duties
+                    li.duty(x-ng-repeat="duty in job.duties") {{duty}}
