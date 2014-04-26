@@ -27,9 +27,18 @@ html(x-ng-app="Portfolio")
             div(x-ng-view x-ng-cloak class="ng-cloak")
 
         script(id="data" type="application/json")!=data
-        script(src="/js/underscore-min.js")
-        script(src="/js/sizzle.js")
-        script(src="http://code.angularjs.org/1.2.16/angular.min.js")
-        script(src="http://code.angularjs.org/1.2.16/angular-route.min.js")
-        script(src="http://code.angularjs.org/1.2.16/angular-sanitize.min.js")
+        script(type="text/javascript" src="/js/underscore-min.js")
+        script(type="text/javascript" src="/js/sizzle.js")
+        script(type="text/javascript" src="http://code.angularjs.org/1.2.16/angular.min.js")
+        script(type="text/javascript" src="http://code.angularjs.org/1.2.16/angular-route.min.js")
+        script(type="text/javascript" src="http://code.angularjs.org/1.2.16/angular-sanitize.min.js")
+        script(type="text/javascript" src="/js/angulartics/angulartics.min.js")
+        script(type="text/javascript" src="/js/angulartics/angulartics-ga.min.js")
         script(type="text/javascript" src="/js/site.js")
+        script(type="text/javascript").
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50425804-1', 'druckson.com');

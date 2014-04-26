@@ -1,8 +1,7 @@
 (function(data) {
-    var app = angular.module("Portfolio", ["ngRoute"]);
+    var app = angular.module("Portfolio", ["ngRoute", "angulartics", "angulartics.google.analytics"]);
 
     app.config(function($routeProvider) {
-        //console.log($routeProvider);
         $routeProvider.when('/', {
             templateUrl: "/partials/experience.html",
             controller: "PortfolioController"
@@ -26,11 +25,8 @@
     app.directive('processing', function($http) {
         return function(scope, iElement, iAttr) {
             $http({method: "GET", url: iAttr.processing}).success(function(data) {
-                console.log("Hello", Processing.compile(data).sourceCode);
                 scope.$processing = new Processing(iElement[0], Processing.compile(data));
             });
-            
-            //scope.$processing = new Processing(iElement[0], scope[iAttr.processing]);
         };
     });
 
