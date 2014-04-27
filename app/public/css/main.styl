@@ -1,19 +1,38 @@
 golden = 1.618
 
+navigationFG = #FFF
+navigationBG = #000
+
+mainFG = #000
+mainBG = #FFF
+
+headingColor = #2B81D6
+
 .ng-cloak
     display: none
 
 body
-    font-family: 'Quicksand', sans-serif
-    //font-family: sans-serif
+    //font-family: 'Quicksand', sans-serif
+    font-family: sans-serif
+    color: mainFG
+    //background-image: url('http://subtlepatterns.com/patterns/mochaGrunge.png')
+    //background-repeat: repeat
+    background-color: mainBG
+
+    a
+        color: mainFG
 
     h1
         font-family: 'Josefin Slab', serif
         font-size: golden**3 em
+        color: headingColor
     
     h2
+        font-family: 'Josefin Slab', serif
+        font-weight: bold
         margin-top: 0.5*golden**2 em
         font-size: golden**2 em
+        color: headingColor
     
     h3
         margin-top: 0.5*golden em
@@ -26,29 +45,34 @@ body
         margin-top: 0.5em
 
     #container
-        #navigation
-            a#name
-                color: #2B81D6
-                font-size: 1em
-        
-            ul
-                li
-                    list-style-type: none
-            a
-                margin-top: 0.5 em
-                text-decoration: none
-                color: #000
-                font-size: golden em
-    
-            a:hover
-                font-weight: bold
-                color: #444
+        #navigation-container
+            #navigation
+                //background-image: url('http://subtlepatterns.com/patterns/zwartevilt.png')
+                //background-repeat: repeat
+                background-color: navigationBG
+
+                a#name
+                    font-size: 1em
+            
+                ul
+                    li
+                        list-style-type: none
+                a
+                    margin-top: 0.5 em
+                    text-decoration: none
+                    font-size: golden em
+                    color: navigationFG
+
+                a.active
+                a:hover
+                    font-weight: bold
+                    color: primaryColor
         
         #content-container
             #content
                 h2
                     width: 100%
-                    border-bottom: thin solid #000
+                    border-bottom: thin solid mainFG
                     display: block
                 li
                     margin-left: golden em
@@ -74,35 +98,40 @@ body
                             display: inline
                             canvas
                                 margin: 1em
-                                border: thin solid #000
+                                border: thin solid secondaryColor
                 #certifications
                     //background-color: #044
 
     @media (min-width:768px)
         #container
-            #navigation
+            #navigation-container
+                width: 24em
                 position: absolute
                 left: 0
                 top: 0
-                width: 20em
                 height: 100%
-                border-right: thin solid #000
-                overflow: auto
 
-                a#name
-                    text-align: right
-                    margin: 30px
-                a
-                    margin-right: 30px
-                    text-decoration: none
-                    color: #000
-                    //font-size: golden em
-                    display: block
-                    text-align: right
+                #navigation
+                    position: absolute
+                    right: 0
+                    float: left
+                    width: 20em
+                    height: 100%
+                    border-right: 8px solid secondaryColor
+                    border-left: 8px solid secondaryColor
+                    overflow: auto
+
+                    a#name
+                        text-align: right
+                        margin: 30px
+                    a
+                        margin-right: 30px
+                        display: block
+                        text-align: right
 
             #content-container
                 position: absolute
-                left: 20em
+                left: 24em
                 height: 100%
                 right: 0
                 overflow: auto
@@ -113,49 +142,50 @@ body
 
     @media (min-width:1200px)
         #container
-            #navigation
+            #navigation-container
                 width: 30%
             #content-container
                 left: 30%
 
     @media (max-width:768px)
-        //font-size: golden**2 em
         width: 100%
         #container 
             display: block
             float: left
-            margin: 2em
-            #navigation
-                display: block
-                float: left
-                
-                ul
-                    float: left
+
+            #navigation-container
+                #navigation
+                    padding: 2em
                     display: block
-                    width: 100%
-
-                    li
-                        display: inline-block
-
-                a#name
-                    margin-top: 2em
-                    width: 100%
-                    display: block
-                    margin: 0
-                    text-align: center
-
-                a
                     float: left
-                    margin-right: 1em
+                    
+                    ul
+                        float: left
+                        display: block
+                        width: 100%
+
+                        li
+                            display: inline-block
+
+                    a#name
+                        margin-top: 2em
+                        width: 100%
+                        display: block
+                        margin: 0
+                        text-align: center
+
+                    a
+                        float: left
+                        margin-right: 1em
 
             #content-container
-                //margin: 2em
-                width: 100%
                 float: left
-                position: relative
 
                 #content
-                    width: 100%
+                    padding: 2em
+
+                    h2
+                        width: 100%
 
                     #projects
                         .image

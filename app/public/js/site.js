@@ -1,13 +1,15 @@
 (function(data) {
     var app = angular.module("Portfolio", ["ngRoute", "angulartics", "angulartics.google.analytics"]);
 
+    var routes = ["skills", "experience", "education", "projects", "certifications"];
+
     app.config(function($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: "/partials/experience.html",
             controller: "PortfolioController"
         });
 
-        _.each(["skills", "experience", "education", "projects", "certifications"], function(page) {
+        _.each(routes, function(page) {
             $routeProvider.when('/' + page + '/', {
                 templateUrl: "/partials/" + page + ".html",
                 controller: "PortfolioController"
@@ -31,10 +33,20 @@
     });
 
 
-    app.controller("PortfolioController", function($scope, $http) {
+    app.controller("PortfolioController", function($scope, $http, $location) {
         var data = JSON.parse(Sizzle("#data")[0].innerHTML);
         for (k in data) {
             $scope[k] = data[k];
+        }
+
+        $scope.routes = routes;
+
+        $scope.urlForRoute = function(route) {
+            return "/#/" + route + "/";
+        }
+
+        $scope.activeRoute = function(route) {
+            return ("/" + route + "/") === $location.path();
         }
     });
 })();

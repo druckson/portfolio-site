@@ -9,20 +9,14 @@ html(x-ng-app="Portfolio")
 
     body(x-ng-controller="PortfolioController")
         #container
-            #navigation(x-ng-cloak class="ng-cloak")
-                a#name(href="/#/")
-                    h1 {{name}}
-                ul
-                    li
-                        a(href="/#/experience/") Experience
-                    li
-                        a(href="/#/projects/") Projects
-                    li
-                        a(href="/#/education/") Education
-                    li
-                        a(href="/#/skills/") Skills
-                    li
-                        a(href="/#/certifications/") Certifications
+            #navigation-container
+                #navigation(x-ng-cloak class="ng-cloak")
+                    a#name(href="/#/")
+                        h1 {{name}}
+                    ul
+                        li(x-ng-repeat="route in routes")
+                            a(x-ng-href="{{ urlForRoute(route) }}" x-ng-class="{active:activeRoute(route)}")
+                                {{ route|uppercase }}
 
             div(x-ng-view x-ng-cloak class="ng-cloak")
 
