@@ -214,12 +214,6 @@
                     "height": 350,
                     "url": "http://www.openprocessing.org/sketch/145144",
                     "pde": "/sketches/fluid-particles-html5.pde"
-                },
-                {
-                    "width": 328,
-                    "height": 350,
-                    "url": "http://www.openprocessing.org/sketch/145038",
-                    "pde": "/sketches/fluid-velocities-html5.pde"
                 }
             ],
             "tags": [
