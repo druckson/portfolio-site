@@ -5,6 +5,7 @@ golden = 1.618
 
 body
     font-family: 'Quicksand', sans-serif
+    //font-family: sans-serif
 
     h1
         font-family: 'Josefin Slab', serif
@@ -109,6 +110,13 @@ body
                 #content
                     max-width: 800px
                     margin: 2em
+
+    @media (min-width:1200px)
+        #container
+            #navigation
+                width: 30%
+            #content-container
+                left: 30%
 
     @media (max-width:768px)
         //font-size: golden**2 em
